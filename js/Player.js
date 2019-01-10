@@ -9,7 +9,7 @@ class Player {
   /**
    * Creates token objects for player
    * @param   {integer}   num - Number of token objects to be created
-   * @return  {array}     tokens - an arary of new token objects
+   * @return  {array}     tokens - an array of new token objects
    */
 
   createTokens(num) {
@@ -21,4 +21,20 @@ class Player {
     }
     return tokens;
   }
+
+  get unusedTokens() {
+    return this.tokens.filter(token => !token.dropped);
+
+  }
+
+  /* Gets active token and return the first object in the array'
+  */
+
+
+  get activeToken() {
+
+  return this.unusedToken[0];
+
+  }
+
 }
