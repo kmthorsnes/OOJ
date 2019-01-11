@@ -15,7 +15,7 @@ class Board {
     for (let x = 0; x < this.columns; x++) {
         const column = [];
 
-        for (let y = 0; y < this.rows, y++) {
+        for (let y = 0; y < this.rows; y++) {
             const space = new Space(x, y);
             column.push(space);
         }
@@ -26,16 +26,13 @@ class Board {
     /* 
     Draws associated SVG spaces for all game
     */
-
-    drawHTMLBoard(){
-        for (let column of this.spaces) {
-            for (let space of column ) {
-
-            }
+   drawHTMLBoard() {
+    for (let column of this.spaces) {
+        for (let space of column) {
+            space.drawSVGSpace();
         }
-        
     }
-
+} 
 }
 
 

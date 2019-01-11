@@ -16,7 +16,7 @@ class Player {
     const tokens = [];
 
     for (let i = 0; i < num; i++) {
-      let token = new token(i, this);
+      let token = new Token(i, this);
       tokens.push(token);
     }
     return tokens;
@@ -24,7 +24,6 @@ class Player {
 
   get unusedTokens() {
     return this.tokens.filter(token => !token.dropped);
-
   }
 
   /* Gets active token and return the first object in the array'
@@ -33,7 +32,7 @@ class Player {
 
   get activeToken() {
 
-  return this.unusedToken[0];
+  return this.unusedTokens[0];
 
   }
 

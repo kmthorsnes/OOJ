@@ -1,7 +1,7 @@
-class Board {
+class Game {
   constructor() {
-    board = new Board();
-    players = this.createPlayers(); 
+    this.board = new Board();
+    this.players = this.createPlayers(); 
     this.ready = false;
   }
 
@@ -11,7 +11,8 @@ class Board {
   */
 
  get activePlayer(){
-  return this.players.find(player => players.active);
+  return this.players.find(player => player.active);
+
 }
 
 
@@ -25,12 +26,17 @@ class Board {
     ];
     return players;
   }
-
-
-
   /**  
    * Gets game ready for play 
   */
- startGame();
+ startGame(){
+  this.board.drawHTMLBoard();
+  this.activePlayer.activeToken.drawHTMLToken();
+  this.ready = true;
+}
 
+
+
+  
+ 
 }
