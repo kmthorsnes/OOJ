@@ -35,8 +35,17 @@ class Game {
   this.ready = true;
 }
 
-
-
-  
- 
+/** 
+Making the game interactive - test for seeing that the game is ready,. 
+ */
+handleKeyDown(e){
+  if (this.ready) {
+    if(e.key === "ArrowLeft") {
+      // move left 
+    } else if(e.key === "ArrowRight") {
+      // move right 
+    } else if(e.key === "ArrowDown") {
+      // Play token
+    } 
+  }
 }
