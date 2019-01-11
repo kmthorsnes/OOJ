@@ -23,13 +23,13 @@ class Token {
 
   /* Other methods */
 
-  drawHTMLToken() {
-    const div = document.createElement("div");
-    document.getElementById("game-board-underlay").appendChild(div);
-    div.setAttribute("id", this.id);
-    div.setAttribute("class", "token");
-    div.style.backgroundColor = this.owner.color;
-  }
+  drawHTMLToken(){
+    const token = document.createElement('div');
+    document.getElementById('game-board-underlay').appendChild(token);
+    token.setAttribute('id', this.id);
+    token.setAttribute('class', 'token');
+    token.style.backgroundColor = this.owner.color;
+}
 
   moveLeft() {
     if (this.columnLocation > 0) {
